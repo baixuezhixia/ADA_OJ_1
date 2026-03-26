@@ -1,0 +1,42 @@
+Ilya works in a magic laboratory. Today she gets a dangerous task:
+There are some unstable magic materials, n in total. These magic materials might have dangerous reactions with each other, which could cause a big explosion!
+Unluckily, a careless worker put all these magic materials together in a pile, so now the situation is very dangerous!
+Good news is that Ilya knows a magic spell that can keep the magic materials stable, so they won't react and explode. But Ilya can't keep using this magic forever, so she needs to move all these magic materials to a safety box quickly.
+Ilya can carry at most m magic materials at a time. When moving the magic materials, she can only use her stabilizing magic on all materials in sight. That means:
+When she starts taking magic materials from the pile to move them, she can keep all materials in the pile stable.
+While moving, she can keep all the materials she's carrying stable.
+When she puts the magic materials into the safety box, she can keep all materials in the safety box stable.
+
+For any other magic materials not in these three cases, Ilya can't do anything to them.
+After all materials are moved from the pile to the safety box, Ilya can put a permanent stabilizing magic on the safety box to keep all the magic materials safe forever. But before she finishes moving all of them, the materials in the safety box are just as dangerous as those in the pile!
+Ilya wants to know if she can safely move all the magic materials to the safety box and put the stabilizing magic on it. If she can, she wants to know the least number of steps she needs to finish this task.
+Hint: To ensure the safety of the materials, sometimes Ilya needs to move some materials back from the safety box to the pile.
+
+Input and Output
+Input Format
+The input has k+1 lines in total.
+The first line has three numbers n, m, k. They stand for the total number of magic materials, the maximum number Ilya can carry at once, and the number of pairs of materials that have dangerous reactions.
+Lines 2 to k+1 (that's k lines) each have two numbers a and b. They mean that the a-th magic material and the b-th magic material will have a dangerous reaction. (Magic materials are numbered starting from 0. The problem ensures that none of the k pairs are repeated.)
+Output Format
+Output a number that shows the least number of steps Ilya needs to move between the pile and the safety box to safely transfer all the magic materials to the safety box.
+If it's impossible to finish the task, output -1.
+
+Data Range
+For 30% of the data, n \leq 5, m = 1, k \leq \frac{n^2-n}{2}.
+For 70% of the data, n \leq 10, m \leq 2, k \leq \frac{n^2-n}{2}.
+For 100% of the data, n \leq 20, m \leq 8, k \leq \frac{n^2-n}{2}.
+
+Sample Test Cases
+Sample Input 1:
+3 1 2
+0 1
+2 1
+Sample Output 1:
+7
+Sample Input 2:
+3 1 3
+0 1
+2 1
+0 2
+Sample Output 2:
+-1
